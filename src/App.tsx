@@ -1,0 +1,45 @@
+import { useState, useEffect } from "react";
+import { Navbar } from "./components/layout/Navbar";
+import { Hero } from "./components/sections/Hero";
+import { About } from "./components/sections/About";
+import { Skills } from "./components/sections/Skills";
+import { FeaturedProject } from "./components/sections/FeaturedProject";
+import { OtherProjects } from "./components/sections/OtherProjects";
+import { Contact } from "./components/sections/Contact";
+import { CustomCursor } from "./components/ui/CustomCursor";
+import { ScrollProgress } from "./components/ui/ScrollProgress";
+
+function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for a smoother experience
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="bg-black-rich min-h-screen text-white selection:bg-gold selection:text-black-rich">
+      <CustomCursor />
+      <ScrollProgress />
+
+      {loading ? (
+        <div className="fixed inset-0 flex items-center justify-center bg-black-rich z-50">
+          <div className="w-16 h-16 border-4 border-gold border-t-transparent rounded-full animate-spin" />
+        </div>
+      ) : (
+        <>
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <FeaturedProject />
+          <OtherProjects />
+          <Contact />
+        </>
+      )}
+    </div>
+  );
+}
+
+export default App;
