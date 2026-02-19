@@ -5,6 +5,7 @@ import { About } from "./components/sections/About";
 import { Skills } from "./components/sections/Skills";
 import { FeaturedProject } from "./components/sections/FeaturedProject";
 import { OtherProjects } from "./components/sections/OtherProjects";
+import { Resume } from "./components/sections/Resume";
 import { Contact } from "./components/sections/Contact";
 import { CustomCursor } from "./components/ui/CustomCursor";
 import { ScrollProgress } from "./components/ui/ScrollProgress";
@@ -35,6 +36,7 @@ function App() {
           <Skills />
           <FeaturedProject />
           <OtherProjects />
+          <Resume />
           <Contact />
         </>
       )}

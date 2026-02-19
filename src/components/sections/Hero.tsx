@@ -77,6 +77,7 @@ export const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
+                        className="flex flex-wrap gap-4"
                     >
                         <Link
                             to="contact"
@@ -85,6 +86,14 @@ export const Hero = () => {
                         >
                             Contact Me
                         </Link>
+
+                        <a
+                            href="/Sudhaa%20Resume.pdf"
+                            download="Sudhaa_Resume.pdf"
+                            className="inline-block px-10 py-4 border border-gold text-gold hover:bg-gold hover:text-black-rich transition-all duration-300 uppercase tracking-widest text-sm font-semibold cursor-pointer"
+                        >
+                            Download Resume
+                        </a>
                     </motion.div>
 
                 </motion.div>
